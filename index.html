@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Objek Wisata Sangeh Bali - Pesona Hutan Pala & Kera Suci</title>
+  
+  <!-- Bootstrap 5 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <style>
+    /* Custom Styling tambahan */
+    .hero-banner {
+      background: linear-gradient(rgba(18, 43, 27, 0.65), rgba(10, 25, 16, 0.8)), 
+                  url('https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      min-height: 85vh;
+    }
+    
+    .card-attraction {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card-attraction:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    .section-title {
+      position: relative;
+      padding-bottom: 12px;
+    }
+    .section-title::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 3px;
+      background-color: var(--bs-success);
+      border-radius: 2px;
+    }
+  </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbarUtama">
+
+  <!-- ========================================================
+       1. NAVBAR (Navigasi Halaman)
+       ======================================================== -->
+  <nav id="navbarUtama" class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-uppercase d-flex align-items-center" href="#beranda">
+        <i class="bi bi-tree-fill text-success me-2 fs-4"></i>
+        <span>Wisata Sangeh</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto gap-lg-2">
+          <li class="nav-item">
+            <a class="nav-link active" href="#beranda">Beranda</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#daya-tarik">Daya Tarik</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#tiket-jadwal">Tiket & Jadwal</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#faq">FAQ</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-success text-white fw-semibold ms-lg-2" href="#tiket-jadwal">
+              <i class="bi bi-ticket-detailed me-1"></i>Pesan Tiket
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========================================================
+       2. HERO BANNER / JUMBOTRON
+       Komponen: Gambar latar lebar + judul besar + tombol CTA
+       ======================================================== -->
+  <header id="beranda" class="hero-banner d-flex align-items-center text-white text-center">
+    <div class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-9">
+          <span class="badge bg-success px-3 py-2 rounded-pill text-uppercase fw-bold mb-3 tracking-wider">
+            <i class="bi bi-geo-alt-fill me-1"></i>Abiansemal, Badung - Bali
+          </span>
+          <h1 class="display-3 fw-bold mb-3">Pesona Alam & Budaya Alas Pala Sangeh</h1>
+          <p class="lead mb-4 px-md-5">
+            Jelajahi keasrian 14 hektar hutan pala homogen yang rindang, sapa ratusan kera ekor panjang yang ramah, dan selami kesucian Pura Bukit Sari peninggalan abad ke-17.
+          </p>
+          <div class="d-flex flex-wrap justify-content-center gap-3">
+            <a href="#daya-tarik" class="btn btn-success btn-lg px-4 py-2 shadow">
+              <i class="bi bi-compass me-2"></i>Jelajahi Daya Tarik
+            </a>
+            <a href="#tiket-jadwal" class="btn btn-outline-light btn-lg px-4 py-2">
+              <i class="bi bi-info-circle me-2"></i>Jadwal & Tarif Tiket
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ========================================================
+         3. BAGIAN FITUR / DAYA TARIK UTAMA (Komponen CARD)
+         Tugas Siswa Non-Laptop: Meriset 3 daya tarik utama di Sangeh
+         Tugas Siswa Laptop: Menerapkan grid Bootstrap & Card
+         ======================================================== -->
+    <section id="daya-tarik" class="py-5 bg-light">
+      <div class="container py-4">
+        <div class="text-center mb-5">
+          <h2 class="fw-bold section-title">Daya Tarik Wisata Sangeh</h2>
+          <p class="text-muted mt-3">Tiga keistimewaan utama yang menjadikan Sangeh destinasi ekowisata dan spiritual ternama</p>
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <!-- Card 1: Pura Bukit Sari -->
+          <div class="col">
+            <div class="card h-100 border-0 shadow-sm card-attraction rounded-3 overflow-hidden">
+              <img src="img/pura-bukit-sari.webp" 
+                   class="card-img-top" alt="Pura Suci Bukit Sari Sangeh" style="height: 220px; object-fit: cover;">
+              <div class="card-body p-4">
+                <div class="text-warning mb-2 fs-4">
+                  <i class="bi bi-building"></i>
+                </div>
+                <h5 class="card-title fw-bold">Pura Suci Bukit Sari</h5>
+                <p class="card-text text-secondary">
+                  Cagar budaya peninggalan Kerajaan Mengwi abad ke-17 yang berdiri sakral di jantung hutan pala. Dikelilingi suasana tenang dan aura spiritual yang damai.
+                </p>
+              </div>
+              <div class="card-footer bg-white border-0 px-4 pb-4">
+                <span class="badge bg-warning-subtle text-warning-emphasis border border-warning-subtle">
+                  <i class="bi bi-shield-check me-1"></i>Situs Cagar Budaya
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Hutan Pala Homogen & Pohon Lanang Wadon -->
+          <div class="col">
+            <div class="card h-100 border-0 shadow-sm card-attraction rounded-3 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=700&q=80" 
+                   class="card-img-top" alt="Hutan Pala Sangeh" style="height: 220px; object-fit: cover;">
+              <div class="card-body p-4">
+                <div class="text-success mb-2 fs-4">
+                  <i class="bi bi-tree-fill"></i>
+                </div>
+                <h5 class="card-title fw-bold">Hutan Pala & Pohon Lanang Wadon</h5>
+                <p class="card-text text-secondary">
+                  Kawasan hutan lindung seluas 13,91 hektar dengan pohon pala berusia ratusan tahun. Tepat di pelataran depan terdapat "Pohon Lanang Wadon" yang unik dan melegenda.
+                </p>
+              </div>
+              <div class="card-footer bg-white border-0 px-4 pb-4">
+                <span class="badge bg-success-subtle text-success border border-success-subtle">
+                  <i class="bi bi-flower1 me-1"></i>Hutan Lindung & Flora Unik
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Kawanan Kera Abu-abu -->
+          <div class="col">
+            <div class="card h-100 border-0 shadow-sm card-attraction rounded-3 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1540573133985-87b6da6d54a9?auto=format&fit=crop&w=700&q=80" 
+                   class="card-img-top" alt="Kera Ekor Panjang Sangeh" style="height: 220px; object-fit: cover;">
+              <div class="card-body p-4">
+                <div class="text-primary mb-2 fs-4">
+                  <i class="bi bi-emoji-smile-fill"></i>
+                </div>
+                <h5 class="card-title fw-bold">Habitat Ratusan Kera Jinak</h5>
+                <p class="card-text text-secondary">
+                  Rumah alami bagi kawanan kera ekor panjang (<em>Macaca fascicularis</em>). Kera di Sangeh tergolong jinak, terbiasa berinteraksi dan dapat diajak berfoto selfie dengan aman.
+                </p>
+              </div>
+              <div class="card-footer bg-white border-0 px-4 pb-4">
+                <span class="badge bg-primary-subtle text-primary border border-primary-subtle">
+                  <i class="bi bi-camera me-1"></i>Spot Foto Interaktif
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         4. JADWAL BUKA & TIKET MASUK (Komponen TABLE & LIST-GROUP)
+         Tugas Siswa Non-Laptop: Meriset tarif tiket Sangeh & jam buka
+         Tugas Siswa Laptop: Menerapkan Bootstrap Table & List Group
+         ======================================================== -->
+    <section id="tiket-jadwal" class="py-5">
+      <div class="container py-4">
+        <div class="text-center mb-5">
+          <h2 class="fw-bold section-title">Jadwal & Tarif Tiket Masuk</h2>
+          <p class="text-muted mt-3">Daftar tarif resmi tiket masuk dan fasilitas pendukung di Objek Wisata Sangeh</p>
+        </div>
+
+        <div class="row g-4 align-items-stretch">
+          <!-- Kolom 1: Tabel Tarif Tiket -->
+          <div class="col-lg-7">
+            <div class="card border-0 shadow-sm h-100 p-4">
+              <h5 class="fw-bold mb-3 text-success">
+                <i class="bi bi-cash-coin me-2"></i>Rincian Tiket Masuk Resmi
+              </h5>
+              <div class="table-responsive">
+                <table class="table table-hover align-middle">
+                  <thead class="table-light">
+                    <tr>
+                      <th scope="col">Kategori Pengunjung</th>
+                      <th scope="col">Dewasa</th>
+                      <th scope="col">Anak-anak</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <i class="bi bi-person-fill text-success me-2"></i>Wisatawan Domestik (WNI)
+                      </td>
+                      <td class="fw-bold text-success">Rp 15.000</td>
+                      <td class="fw-semibold">Rp 5.000</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <i class="bi bi-globe-americas text-primary me-2"></i>Wisatawan Mancanegara (WNA)
+                      </td>
+                      <td class="fw-bold text-primary">Rp 75.000*</td>
+                      <td class="fw-semibold">Rp 50.000*</td>
+                    </tr>
+                    <tr class="table-light">
+                      <td colspan="3" class="fw-bold text-secondary">
+                        <i class="bi bi-p-square me-1"></i>Tarif Parkir Kendaraan
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <i class="bi bi-bicycle text-muted me-2"></i>Sepeda Motor
+                      </td>
+                      <td colspan="2"><span class="badge bg-success-subtle text-success">Gratis</span></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <i class="bi bi-car-front-fill text-muted me-2"></i>Mobil Pribadi
+                      </td>
+                      <td colspan="2" class="fw-semibold">Rp 5.000 / unit</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <i class="bi bi-bus-front-fill text-muted me-2"></i>Bus Pariwisata
+                      </td>
+                      <td colspan="2" class="fw-semibold">Rp 10.000 / unit</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <small class="text-muted mt-2">
+                <i class="bi bi-info-circle me-1"></i>*Tiket wisatawan mancanegara sudah termasuk asuransi, pakan monyet, dan donasi pelestarian hutan.
+              </small>
+            </div>
+          </div>
+
+          <!-- Kolom 2: Jam Operasional & Fasilitas (List Group) -->
+          <div class="col-lg-5">
+            <div class="card border-0 shadow-sm h-100 p-4">
+              <h5 class="fw-bold mb-3 text-success">
+                <i class="bi bi-clock-history me-2"></i>Jam Operasional & Fasilitas
+              </h5>
+              
+              <ul class="list-group list-group-flush mb-4">
+                <li class="list-group-item d-flex justify-content-between align-items-center px-0 py-3">
+                  <div>
+                    <strong class="d-block">Buka Setiap Hari</strong>
+                    <small class="text-muted">Senin s/d Minggu & Hari Libur</small>
+                  </div>
+                  <span class="badge bg-success rounded-pill px-3 py-2 fs-6">08.00 - 17.00 WITA</span>
+                </li>
+                <li class="list-group-item px-0 py-2">
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>Pemandu Lokal (Local Guide) ramah & berpengalaman
+                </li>
+                <li class="list-group-item px-0 py-2">
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>Jalur Paving Teduh (Aman untuk anak-anak & lansia)
+                </li>
+                <li class="list-group-item px-0 py-2">
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>Penyewaan Kain Adat Bali untuk masuk area Pura
+                </li>
+                <li class="list-group-item px-0 py-2">
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>Toilet Bersih, Gazebo Istirahat & Pasar Seni Lokal
+                </li>
+              </ul>
+
+              <div class="alert alert-success d-flex align-items-center mb-0 mt-auto" role="alert">
+                <i class="bi bi-sun-fill fs-3 me-3 flex-shrink-0 text-warning"></i>
+                <div class="small">
+                  <strong>Waktu Terbaik Berkunjung:</strong> Datang antara pukul 08.30 – 10.30 WITA untuk menikmati udara hutan yang segar dan tingkah kera yang aktif bermain!
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         5. TANYA JAWAB / FAQ (Komponen ACCORDION)
+         Tugas Siswa Non-Laptop: Menulis 3 tanya-jawab seputar Sangeh
+         Tugas Siswa Laptop: Menerapkan Bootstrap Accordion
+         ======================================================== -->
+    <section id="faq" class="py-5 bg-light">
+      <div class="container py-4">
+        <div class="text-center mb-5">
+          <h2 class="fw-bold section-title">Tanya Jawab Seputar Sangeh (FAQ)</h2>
+          <p class="text-muted mt-3">Hal-hal yang sering ditanyakan sebelum berwisata ke Hutan Pala Sangeh</p>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="accordion shadow-sm" id="accordionFaq">
+              <!-- Item FAQ 1 -->
+              <div class="accordion-item border-0 mb-3 rounded-3 overflow-hidden shadow-sm">
+                <h2 class="accordion-header" id="headingSatu">
+                  <button class="accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSatu">
+                    <i class="bi bi-question-circle-fill text-success me-2"></i>
+                    Apakah kawanan kera di Sangeh aman dan tidak agresif?
+                  </button>
+                </h2>
+                <div id="collapseSatu" class="accordion-collapse collapse" data-bs-parent="#accordionFaq">
+                  <div class="accordion-body text-secondary">
+                    <strong>Sangat aman.</strong> Kera di Alas Pala Sangeh telah terbiasa berinteraksi dengan wisatawan karena mendapatkan pasokan makanan teratur dari pihak pengelola desa adat. Meskipun jinak, pengunjung disarankan untuk tidak memakai perhiasan mencolok, mengamankan kacamata/topi, serta didampingi pemandu lokal saat ingin berfoto selfie bersama kera.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item FAQ 2 -->
+              <div class="accordion-item border-0 mb-3 rounded-3 overflow-hidden shadow-sm">
+                <h2 class="accordion-header" id="headingDua">
+                  <button class="accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDua">
+                    <i class="bi bi-question-circle-fill text-success me-2"></i>
+                    Apa aturan pakaian dan etika saat berada di kawasan Pura Bukit Sari?
+                  </button>
+                </h2>
+                <div id="collapseDua" class="accordion-collapse collapse" data-bs-parent="#accordionFaq">
+                  <div class="accordion-body text-secondary">
+                    Karena kawasan ini merupakan area persembahyangan suci umat Hindu Bali, pengunjung diwajibkan berpakaian sopan dan mengenakan kain kamen/selendang (telah disediakan di loket). Selain itu, demi menghormati kesucian pura, wanita yang sedang dalam masa haid/cuntaka dilarang memasuki pelataran utama pura.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item FAQ 3 -->
+              <div class="accordion-item border-0 rounded-3 overflow-hidden shadow-sm">
+                <h2 class="accordion-header" id="headingTiga">
+                  <button class="accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTiga">
+                    <i class="bi bi-question-circle-fill text-success me-2"></i>
+                    Berapa jarak tempuh menuju Sangeh dari Kota Denpasar atau Ubud?
+                  </button>
+                </h2>
+                <div id="collapseTiga" class="accordion-collapse collapse" data-bs-parent="#accordionFaq">
+                  <div class="accordion-body text-secondary">
+                    Objek Wisata Sangeh berjarak sekitar <strong>25 km</strong> dari pusat Kota Denpasar (sekitar <strong>45–50 menit</strong>) dan hanya berjarak <strong>18 km</strong> dari kawasan Ubud (sekitar <strong>35–40 menit</strong>). Akses jalan aspal sangat mulus dan dapat dilalui sepeda motor, mobil, hingga bus pariwisata.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         6. CALL TO ACTION / AJAKAN AKHIR
+         ======================================================== -->
+    <section class="py-5 bg-success text-white text-center">
+      <div class="container py-3">
+        <h3 class="fw-bold mb-3">Siap Menikmati Kesegaran Alam Alas Pala Sangeh?</h3>
+        <p class="mb-4">Rasakan kedamaian alam yang asri, udara hutan yang sejuk, dan keramahan satwa Bali bersama keluarga Anda.</p>
+        <a href="https://maps.google.com/?q=Sangeh+Monkey+Forest+Bali" target="_blank" class="btn btn-warning btn-lg fw-semibold px-4 text-dark shadow-sm">
+          <i class="bi bi-geo-alt-fill me-2"></i>Buka Petunjuk Arah di Google Maps
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================
+       7. FOOTER
+       ======================================================== -->
+  <footer class="bg-dark text-white py-4">
+    <div class="container">
+      <div class="row gy-3 align-items-center">
+        <div class="col-md-6 text-center text-md-start">
+          <h5 class="fw-bold mb-1"><i class="bi bi-tree-fill text-success me-2"></i>Objek Wisata Sangeh Bali</h5>
+          <small class="text-white-50">Jl. Brahmana, Desa Sangeh, Kec. Abiansemal, Kab. Badung, Bali 80352</small>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <small class="text-white-50 d-block">
+            Proyek Kolaborasi DPK Kelas X - Informatika & Rekayasa Perangkat Lunak
+          </small>
+        </div>
+      </div>
+      <hr class="border-secondary my-3">
+      <div class="text-center text-white-50 small">
+        &copy; 2026 Objek Wisata Alas Pala Sangeh. Dibuat dengan Bootstrap 5.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JS Bundle with Popper CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
